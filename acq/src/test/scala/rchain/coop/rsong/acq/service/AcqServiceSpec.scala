@@ -64,7 +64,7 @@ class AcqServiceSpec extends Specification with ScalaCheck with BeforeEach {
       _ = log.info(s"counter v = ${v} prefetching contentid = ${content.id}")
       s1 ← acq.prefetch(content.id)
       _ = log.info(
-        s"counter v = ${v} pre-fetched by content-id = ${content.id} result= ${s1}"
+        s"counter v = ${v} pre-fetched content-id = ${content.id} result= ${s1}"
       )
       s2 ← acq.proposeBlock
     } yield s2
